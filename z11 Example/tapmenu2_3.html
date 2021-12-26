@@ -13,7 +13,6 @@
         ul,ol{list-style:none}
         em,address{font-style:normal}
         a{text-decoration:none}
-        a:hover,a:active,a:focus{text-decoration:underline}
         
         /* style */
         .tap-menu{
@@ -26,6 +25,7 @@
         }
 
         .tap-menu__title{
+            width: 56px;
             float: left;
             display: inline-block;
             padding: 0px 30px;
@@ -35,7 +35,7 @@
             border: 1px solid #aaaaaa;
             font-size: 13px;
             color: #666;
-            font-weight: bold;
+
         }
         
         .tap-menu__list{
@@ -53,6 +53,7 @@
             background-color: #fff;
             border-bottom-color: #fff;
             border-bottom-width: 1px;
+            font-weight: bold;
         }
 
         .tap-menu__item--focused .tap-menu__list{
@@ -61,13 +62,20 @@
         
         .tap-menu__list > li{
             margin: 15px 0;
-            padding-bottom: 5px;
+            padding-bottom: 20px;
             border-bottom: 1px dashed #aaaaaa;
-
-            color: #666;
         }
 
-        .tap-menu__list span{
+        .tap-menu__list > li a{
+            color: #666;
+            float: left;
+        }
+        
+        .tap-menu__list > li a:hover{
+            text-decoration: underline;
+        }
+
+        .tap-menu__list > li span{
             float: right;
 
             font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -91,34 +99,32 @@
 <body>
     <div class="tap-menu">
         <ul>
+            <li class="tap-menu__item">
+                <a class="tap-menu__title" href="#"><span>공지사항</span></a>
+                <ul class="tap-menu__list">
+                    <li><a href="">이것은 첫 번째 탭의 공지사항 목록 입니다.</a> <span>2017-03-08</span></li>
+                    <li><a href="">이것은 첫 번째 탭의 공지사항 목록 입니다.</a> <span>2017-03-08</span></li>
+                    <li><a href="">이것은 첫 번째 탭의 공지사항 목록 입니다.</a> <span>2017-03-08</span></li>
+                </ul>
+                <a class="tap-menu__more">공지사항 더보기</a>
+            </li>
             <li class="tap-menu__item tap-menu__item--focused">
-                <a class="tap-menu__title" href=""><span>공지사항</span></a>
+                <a class="tap-menu__title" href="#"><span>보도자료</span></a>
                 <ul class="tap-menu__list">
-                    <li>이것은 첫 번째 탭의 공지사항 목록 입니다. <span>2017-03-08</span></li>
-                    <li>이것은 첫 번째 탭의 공지사항 목록 입니다. <span>2017-03-08</span></li>
-                    <li>이것은 첫 번째 탭의 공지사항 목록 입니다. <span>2017-03-08</span></li>
-                    <li>이것은 첫 번째 탭의 공지사항 목록 입니다. <span>2017-03-08</span></li>
-                    <li>이것은 첫 번째 탭의 공지사항 목록 입니다. <span>2017-03-08</span></li>
+                    <li><a href="">이것은 첫 번째 탭의 보도자료 목록 입니다.</a> <span>2017-03-08</span></li>
+                    <li><a href="">이것은 첫 번째 탭의 보도자료 목록 입니다.</a> <span>2017-03-08</span></li>
+                    <li><a href="">이것은 첫 번째 탭의 보도자료 목록 입니다.</a> <span>2017-03-08</span></li>
                 </ul>
-                <span class="tap-menu__more">공지사항 더보기</span>
+                <a class="tap-menu__more">보도자료 더보기</a>
             </li>
             <li class="tap-menu__item">
-                <a class="tap-menu__title" href=""><span>보도자료</span></a>
+                <a class="tap-menu__title" href="#"><span>해명자료</span></a>
                 <ul class="tap-menu__list">
-                    <li>이것은 첫 번째 탭의 보도자료 목록 입니다. <span>2017-03-08</span></li>
-                    <li>이것은 첫 번째 탭의 보도자료 목록 입니다. <span>2017-03-08</span></li>
-                    <li>이것은 첫 번째 탭의 보도자료 목록 입니다. <span>2017-03-08</span></li>
+                    <li><a href="">이것은 첫 번째 탭의 해명자료 목록 입니다.</a> <span>2017-03-08</span></li>
+                    <li><a href="">이것은 첫 번째 탭의 해명자료 목록 입니다.</a> <span>2017-03-08</span></li>
+                    <li><a href="">이것은 첫 번째 탭의 해명자료 목록 입니다.</a> <span>2017-03-08</span></li>
                 </ul>
-                <span class="tap-menu__more">보도자료 더보기</span>
-            </li>
-            <li class="tap-menu__item">
-                <a class="tap-menu__title" href=""><span>해명자료</span></a>
-                <ul class="tap-menu__list">
-                    <li>이것은 첫 번째 탭의 해명자료 목록 입니다. <span>2017-03-08</span></li>
-                    <li>이것은 첫 번째 탭의 해명자료 목록 입니다. <span>2017-03-08</span></li>
-                    <li>이것은 첫 번째 탭의 해명자료 목록 입니다. <span>2017-03-08</span></li>
-                </ul>
-                <span class="tap-menu__more">해명자료 더보기</span>
+                <a class="tap-menu__more">해명자료 더보기</a>
             </li>
         </ul>
     </div>
