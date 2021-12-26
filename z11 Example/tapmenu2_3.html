@@ -16,7 +16,76 @@
         a:hover,a:active,a:focus{text-decoration:underline}
         
         /* style */
+        .tap-menu{
+            width: 560px;
+            margin: 20px auto;
+        }
+        
+        .tap-menu__item{
+            position: relative;
+        }
 
+        .tap-menu__title{
+            float: left;
+            display: inline-block;
+            padding: 0px 30px;
+            line-height: 34px;
+
+            background-color: #eee;
+            border: 1px solid #aaaaaa;
+            font-size: 13px;
+            color: #666;
+            font-weight: bold;
+        }
+        
+        .tap-menu__list{
+            display: none;
+            position: absolute;
+            top: 35px;
+            width: 100%;
+
+            border-top: 1px solid #aaaaaa;
+        }
+        .tap-menu__item--focused .tap-menu__title{
+            position: relative;
+            z-index: 999;
+
+            background-color: #fff;
+            border-bottom-color: #fff;
+            border-bottom-width: 1px;
+        }
+
+        .tap-menu__item--focused .tap-menu__list{
+            display: block;
+        }
+        
+        .tap-menu__list > li{
+            margin: 15px 0;
+            padding-bottom: 5px;
+            border-bottom: 1px dashed #aaaaaa;
+
+            color: #666;
+        }
+
+        .tap-menu__list span{
+            float: right;
+
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        .tap-menu__more{
+            display: none;
+            position: absolute;
+            right: 0px;
+            top: 10px;
+
+            color: #666;
+            letter-spacing: -1px;
+        }
+
+        .tap-menu__item--focused .tap-menu__more{
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -28,7 +97,10 @@
                     <li>이것은 첫 번째 탭의 공지사항 목록 입니다. <span>2017-03-08</span></li>
                     <li>이것은 첫 번째 탭의 공지사항 목록 입니다. <span>2017-03-08</span></li>
                     <li>이것은 첫 번째 탭의 공지사항 목록 입니다. <span>2017-03-08</span></li>
+                    <li>이것은 첫 번째 탭의 공지사항 목록 입니다. <span>2017-03-08</span></li>
+                    <li>이것은 첫 번째 탭의 공지사항 목록 입니다. <span>2017-03-08</span></li>
                 </ul>
+                <span class="tap-menu__more">공지사항 더보기</span>
             </li>
             <li class="tap-menu__item">
                 <a class="tap-menu__title" href=""><span>보도자료</span></a>
@@ -37,6 +109,7 @@
                     <li>이것은 첫 번째 탭의 보도자료 목록 입니다. <span>2017-03-08</span></li>
                     <li>이것은 첫 번째 탭의 보도자료 목록 입니다. <span>2017-03-08</span></li>
                 </ul>
+                <span class="tap-menu__more">보도자료 더보기</span>
             </li>
             <li class="tap-menu__item">
                 <a class="tap-menu__title" href=""><span>해명자료</span></a>
@@ -45,6 +118,7 @@
                     <li>이것은 첫 번째 탭의 해명자료 목록 입니다. <span>2017-03-08</span></li>
                     <li>이것은 첫 번째 탭의 해명자료 목록 입니다. <span>2017-03-08</span></li>
                 </ul>
+                <span class="tap-menu__more">해명자료 더보기</span>
             </li>
         </ul>
     </div>
