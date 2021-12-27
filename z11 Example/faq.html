@@ -6,26 +6,115 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/faq.css">
         <title>faq</title>
+        <style>
+        html,body{width:100%; height:100%}
+        body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dl,dd,table,th,td,form,fieldset,legend,input,textarea,body,input{
+            margin: 0;
+            padding: 0;
+        }
+        body,input,textarea,select,button,table{
+            font-family: 'Malgun Gothic' sans-serif;
+        }
+        a{text-decoration: none;}
+        a:hover{text-decoration: none;}
+
+        /* style */
+            .faq{
+                width: 860px;
+                margin: 5px auto;
+            }
+
+            .faq__heading{
+                /* display: flex;
+                justify-content: space-between; */
+                /* padding: 10px 0; */
+                
+            }
+
+            .faq__heading:after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+
+            .faq__heading-title{
+                font-family: 'Malgun Gothic' sans-serif;
+                font-size: 25px;
+                float: left;
+            }
+
+            .faq__heading-btn{
+                float: right;
+                margin-top: 5px;
+                border: 0px;
+                background-color: #fff;
+                cursor: pointer;
+                letter-spacing: -1px;
+            }
+
+            .faq__list{
+                border-bottom-color: #ccc;
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+            }
+            
+            .faq__item-heading{
+                padding: 15px 10px;
+
+                border-top-color: #ccc;
+                border-top-width: 1px;
+                border-top-style: solid;
+            }
+            
+            .faq__heading-title{}
+
+            .faq__item-heading > a{
+                font-size: 15px;
+                font-weight: bold;
+                color: #333;
+            }
+
+            .faq__item-desc{
+                padding: 15px 10px;
+                display: none;
+            }
+
+            .faq__item-desc > p{
+                font-size: 13px;
+                color: #666;
+            }
+
+            .faq__item-desc--focuse{
+                display: block;
+            }
+
+            .faq__item-heading--focuse{
+                background-color: #eee;
+            }
+            .faq__item-heading--focuse> a{
+                color: black;
+                font-weight: bold;
+            }
+        </style>
     </head>
     <body>
         <div class="faq">
-            <div class="hgroup">
-                <h2>FAQ</h2>
-                <button type="button">
-                    <span>답변 모두 여닫기</span></button>
+            <div class="faq__heading">
+                <h2 class="faq__heading-title">FAQ</h2>
+                <button type="button" class="faq__heading-btn"><span>답변 모두 여닫기</span></button>
             </div>
-            <dl>
-                <dt>
-                    <a href="#a1">Q:질문과 답변 목록은 무엇으로 마크업 해야 하나요?</a>
+            <dl class="faq__list">
+                <dt class="faq__item-heading">
+                    <a href="#a1">Q: 질문과 답변 목록은 무엇으로 마크업 해야 하나요?</a>
                 </dt>
-                <dd id="a1">
-                    <p>A:비 순차 목록, 순차 목록, 정의 목록으로 마크업 할 수 있습니다. 더 나아가 각각의 항목 안에서 '질문'과 '답변'을 무엇으로 마크업
+                <dd id="a1" class="faq__item-desc">
+                    <p>A: 비 순차 목록, 순차 목록, 정의 목록으로 마크업 할 수 있습니다. 더 나아가 각각의 항목 안에서 '질문'과 '답변'을 무엇으로 마크업
                         할 것인지에 대하여는 많은 고민이 필요 합니다.</p>
                 </dd>
-                <dt>
+                <dt class="faq__item-heading faq__item-heading--focuse">
                     <a href="#a2">Q:질문과 답변 목록은 무엇으로 마크업 해야 하나요?</a>
                 </dt>
-                <dd id="a2" class="on">
+                <dd class="faq__item-desc faq__item-desc--focuse">
                     <p>A:비 순차 목록, 순차 목록, 정의 목록으로 마크업 할 수 있습니다. 더 나아가 각각의 항목 안에서 '질문'과 '답변'을 무엇으로 마크업
                         할 것인지에 대하여는 많은 고민이 필요 합니다.</p>
                 </dd>
