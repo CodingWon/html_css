@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body{width:100%;height:100%}
+        body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+        body,input,textarea,select,button,table{font-family:'돋움',Dotum,AppleGothic,sans-serif;font-size:12px}
+        img,fieldset{border:0}
+        ul,ol{list-style:none}
+        em,address{font-style:normal}
+        a{text-decoration:none}
+        a:hover,a:active,a:focus{text-decoration:underline}
+        .blind{display: block; position: absolute; left: 0px; top:-999em; overflow: hidden;}
+        .d-none{position: absolute; left: 0; top: -9999em;}
+
+        /* style */
+        
+        #header{width: 978px; margin: 0 auto;}
+        #header .title{float: left; margin: 35px 0px 23px 3px;}
+        #header .title a {display: block; width: 103px; height: 37px; background:url(img/gnb.gif) no-repeat 0 0; text-indent: -9999em;}
+        #header .sub {float: left; margin: 42px 0px 0px 23px;} 
+        #header .sub li{}
+        #header .sub li a{display: block; width: 46px; height: 27px; background:url(img/gnb.gif) no-repeat 0 -48px; text-indent: -9999em;}
+        #header .area{clear: both; position: relative; height: 43px; border-top: 2px solid #333; border-bottom: 1px solid #cdcdcd;}
+        #header .area .gnb_real{}
+        #header .area .gnb_real li{float: left;}
+        #header .area .gnb_real li a{display: block; height: 44px;  background:url(img/gnb.gif) no-repeat; text-indent: -9999em; margin-right: 1px;}
+        #header .area .gnb_real li.mm01 a{width: 77px; background-position: 0 -675px}
+        #header .area .gnb_real li.mm02 a{width: 82px; background-position: -78px -675px}
+        #header .area .gnb_real li.mm03 a{width: 84px; background-position: -161px -675px}
+        #header .area .gnb_real li.mm04 a{width: 49px; background-position: -246px -675px}
+        #header .area .gnb_real li.mm05 a{width: 75px; background-position: -296px -675px}
+        #header .area .gnb_real li.mm06 a{width: 51px; background-position: -372px -675px}
+        #header .area .gnb_real li.mm07 a{width: 51px; background-position: -424px -675px}
+        #header .area .gnb_real li.mm08 a{width: 75px; background-position: -476px -675px}
+        #header .area .gnb_real li.mm09 a{width: 90px; background-position: -552px -675px}
+
+        #header .area .gnb_real li.mm01 a:hover,
+        #header .area .gnb_real li.mm01 a.active {width: 77px; background-position: 0 -725px}
+        #header .area .gnb_real li.mm02 a:hover,
+        #header .area .gnb_real li.mm02 a.active{width: 82px; background-position: -78px -725px}
+        #header .area .gnb_real li.mm03 a:hover,
+        #header .area .gnb_real li.mm03 a.active{width: 84px; background-position: -161px -725px}
+        #header .area .gnb_real li.mm04 a:hover,
+        #header .area .gnb_real li.mm04 a.active{width: 49px; background-position: -246px -725px}
+        #header .area .gnb_real li.mm05 a:hover,
+        #header .area .gnb_real li.mm05 a.active{width: 75px; background-position: -296px -725px}
+        #header .area .gnb_real li.mm06 a:hover,
+        #header .area .gnb_real li.mm06 a.active{width: 51px; background-position: -372px -725px}
+        #header .area .gnb_real li.mm07 a:hover,
+        #header .area .gnb_real li.mm07 a.active{width: 51px; background-position: -424px -725px}
+        #header .area .gnb_real li.mm08 a:hover,
+        #header .area .gnb_real li.mm08 a.active{width: 75px; background-position: -476px -725px}
+        #header .area .gnb_real li.mm09 a:hover,
+        #header .area .gnb_real li.mm09 a.active{width: 90px; background-position: -552px -725px}
+
+        #header .area .gnb_with{float: right; margin-right: 85px;}
+        #header .area .gnb_with li{}
+        #header .area .gnb_with li a{display: block; width: 100px; height: 44px;  background:url(img/gnb.gif) no-repeat -793px -675px; text-indent: -9999em;}
+        #header .area .gnb_with li a:hover{display: block; width: 100px; height: 44px;  background:url(img/gnb.gif) no-repeat -793px -725px; text-indent: -9999em;}
+        #header .area .gnb_app{position: absolute; right: 0px; top: 8px;}
+        #header .area .gnb_app a{display: block; width:82px; height: 30px;  background:url(img/gnb.gif) no-repeat 0 -125px; text-indent: -9999em;}
+
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1 class="title"><a href="#">부동산</a></h1>
+        <h2 class="d-none">관련메뉴</h2>
+        <ul class="sub">
+            <li><a href="#">금융</a></li>
+        </ul>
+        <div class="area">
+            <h2 class="d-none">메인메뉴</h2>
+            <ul class="gnb_real">
+                <li class="mm01"><a class="active" href="#">부동산홈</a></li>
+                <li class="mm02"><a href="#">매물&middot;시세</a></li>
+                <li class="mm03"><a href="#">신축&middot;분양</a></li>
+                <li class="mm04"><a href="#">경매</a></li>
+                <li class="mm05"><a href="#">인테리어</a></li>
+                <li class="mm06"><a href="#">이사</a></li>
+                <li class="mm07"><a href="#">뉴스</a></li>
+                <li class="mm08"><a href="#">커뮤니티</a></li>
+                <li class="mm09"><a href="#">지역핫이슈</a></li>
+            </ul>
+            <ul class="gnb_with">
+                <li class="mm01"><a href="#">관리센터</a></li>
+            </ul>
+            <div class="gnb_app"><a href="">부동산앱</a></div>
+        </div>
+    </div>
+</body>
+</html>
